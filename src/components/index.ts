@@ -1,1 +1,1 @@
-export { default as ImageHero } from './ImageHero';
+export { default as Header } from './Header';

@@ -1,6 +1,14 @@
 import React from "react"
-import Landing from './landing';
+import { Header } from '../components';
+import Main from './home';
+
+import stlyes from '../styles/index.module.scss';
 
 export default function Home() {
-  return <Landing />
+  return (
+    <div>
+      <Header />
+      <Main />
+    </div>
+  )
 }
