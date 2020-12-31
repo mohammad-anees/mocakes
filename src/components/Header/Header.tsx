@@ -7,6 +7,7 @@ interface HeaderProps {
 }
 
 enum Path {
+  HOME='/',
   CAKES='/cakes',
   CUPCAKES='/cupcakes',
   COOKIES='/cookies',
@@ -24,9 +25,7 @@ const NavButton: React.FC<{ route: Path, label: string }> = ({ route, label }) =
 const Header: React.FC<HeaderProps> = () => {
   return (
     <div className={styles.headerContainer}>
-      <div className={styles.logoContainer}>
-        Mo' Cakes
-      </div>
+      <a className={styles.logoButton} href={Path.HOME}>Mo' Cakes</a>
       <div className={styles.navContainer}>
         <NavButton route={Path.CAKES} label='Cakes' />-
         <NavButton route={Path.CUPCAKES} label='Cupcakes' />-
