@@ -1,20 +1,13 @@
 import React from 'react';
 
+import { Routes } from '../../utils/Routes';
 import styles from './Header.module.scss';
 
 interface HeaderProps {
   activeRoute?: string;
 }
 
-enum Path {
-  CAKES='/cakes',
-  CUPCAKES='/cupcakes',
-  COOKIES='/cookies',
-  CUSTOMS='/customs',
-  FAQ='/faq',
-}
-
-const NavButton: React.FC<{ route: Path, label: string }> = ({ route, label }) => {
+const NavButton: React.FC<{ route: Routes, label: string }> = ({ route, label }) => {
   const isActive = window.location.pathname === route;
   const className = isActive ? `${styles.navButton} ${styles.active}` : styles.navButton;
 
@@ -24,15 +17,13 @@ const NavButton: React.FC<{ route: Path, label: string }> = ({ route, label }) =
 const Header: React.FC<HeaderProps> = () => {
   return (
     <div className={styles.headerContainer}>
-      <div className={styles.logoContainer}>
-        Mo' Cakes
-      </div>
+      <a className={styles.logoButton} href={Routes.HOME}>Mo' Cakes</a>
       <div className={styles.navContainer}>
-        <NavButton route={Path.CAKES} label='Cakes' />-
-        <NavButton route={Path.CUPCAKES} label='Cupcakes' />-
-        <NavButton route={Path.COOKIES} label='Cookies' />-
-        <NavButton route={Path.CUSTOMS} label='Customs' />-
-        <NavButton route={Path.FAQ} label='FAQ' />
+        <NavButton route={Routes.CAKES} label='Cakes' />-
+        <NavButton route={Routes.CUPCAKES} label='Cupcakes' />-
+        <NavButton route={Routes.COOKIES} label='Cookies' />-
+        <NavButton route={Routes.CUSTOMS} label='Customs' />-
+        <NavButton route={Routes.FAQ} label='FAQ' />
       </div>
     </div>
   )

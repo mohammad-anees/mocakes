@@ -5,8 +5,6 @@
   background-color: lightblue;
 
   display: flex;
-  position: fixed;
-  top: 0px;
   
   font-family: 'Josefin Slab', 'Times New Roman', Times, serif;
 
@@ -15,15 +13,15 @@
     line-height: 50px;
   }
 
-  .logo-container {
+  .logo-button {
     height: 100%;
     font-size: 30px;
     font-weight: 700;
-    color: block;
     padding-left: 80px;
+    border: none;
 
     @media only screen and (max-width: 800px) {
-      font-size: 22px;
+      font-size: 18px;
       padding-left: 30px;
     }  
   }
@@ -31,7 +29,6 @@
   .nav-container {
     height: 100%;
     flex: 1;
-    color: black;
     display: flex;
     justify-content: flex-end;
     padding-right: 80px;
@@ -61,10 +58,11 @@
     }
 
     @media only screen and (max-width: 800px) {
+      display: none;
       padding-right: 30px;
 
       .nav-button {
-        font-size: 16px;
+        font-size: 14px;
       }
     } 
   }
