@@ -21,7 +21,7 @@ export default function Home() {
         />
         <ImageCard
           title='The Cupcakes'
-          subtitle='Order one of our signature sets.'
+          subtitle='Order one of our signature cupcake sets.'
           route={Routes.CUPCAKES}
           image={cupcakesImage}
         />
@@ -33,7 +33,7 @@ export default function Home() {
         />
         <ImageCard
           title='The Customs'
-          subtitle='Inquire about custom cakes.'
+          subtitle='Inquire about our custom cake options.'
           route={Routes.CUSTOMS}
           image={customsImage}
         />
