@@ -12,6 +12,7 @@ $white: #cccccc;
 body, html {
   margin: 0px;
   color: $primary-text;
+  background-color: lightblue;
 }
 
 h1, h2, h3, h4 {
@@ -26,5 +27,20 @@ h5, h6, span, p, li {
 a { 
   color: $primary-text;
   text-decoration: none;
-  border-bottom: dotted 2px $primary-text;
+  font-family: 'Josefin Slab', sans-serif;
+
+  &.active {
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
 }

@@ -20,6 +20,10 @@
     padding-left: 80px;
     border: none;
 
+    &:hover{
+      text-decoration: none;
+    }
+
     @media only screen and (max-width: 800px) {
       font-size: 18px;
       padding-left: 30px;
@@ -40,21 +44,6 @@
       background-color: transparent;
       font-size: 18px;
       padding: 0px 5px 0px 5px;
-
-      &.active {
-        font-weight: 700;
-        text-decoration: underline;
-      }
-
-      &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-      }
-
-      &:focus {
-        border: none;
-        outline: none;
-      }
     }
 
     @media only screen and (max-width: 800px) {
