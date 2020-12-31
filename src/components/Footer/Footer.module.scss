@@ -1,0 +1,36 @@
+.footer-container {
+  display: flex;
+  background-color: lightblue;
+  padding: 10px 80px;
+
+  .footer-column {
+    margin: 0px 10px;
+    width: 100%;
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .quick-links-container {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  .contact-list {
+    margin-top: 10px;
+    padding-left: 25px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    padding: 10px 30px;
+  }
+}

@@ -1,13 +1,9 @@
 import React from 'react';
 
-import { Header } from '../components';
+import { Page } from '../components';
 
 const Cakes: React.FC = () => {
-  return (
-    <div>
-      <Header />
-    </div>
-  );
+  return <Page />;
 }
 
 export default Cakes;
