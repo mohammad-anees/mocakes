@@ -15,7 +15,7 @@ const Page: React.FC<PageProps> = ({ children, title, subtitle }) => {
     if (!subtitle) return null;
 
     if (typeof subtitle === 'string') return <p>{subtitle}</p>;
-    return {subtitle};
+    return subtitle;
   }, [subtitle]);
 
   return (
