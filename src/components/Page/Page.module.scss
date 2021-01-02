@@ -1,8 +1,51 @@
 .content-container {
   background-color: white;
+
+  padding-right: 80px;
+  padding-left: 80px;
+  padding-bottom: 40px;
+
+  &.top-padding {
+    padding-top: 40px;
+  }
+
+  @media only screen and (max-width: 800px) {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+
+    .top-padding {
+      padding-top: 20px;
+    }
+  }
+}
+
+.page-title {
+  text-align: center;
+  background-color: white;
+  flex: 1;
+  flex-direction: column;
   padding: 40px 80px;
+
+  h1 {
+    margin: 0px;
+  }
+
+  p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: 7px auto 0px auto;
+  }
 
   @media only screen and (max-width: 800px) {
     padding: 20px 20px;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 16px;
+    }
   }
 }

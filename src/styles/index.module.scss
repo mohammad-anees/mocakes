@@ -1,8 +1,6 @@
 .image-cards-container {
   display: flex;
   flex: 1;
-  padding-top: 40px;
-  padding-bottom: 40px;
 
   @media screen and (max-width: 800px) {
     flex-direction: column;

@@ -8,13 +8,18 @@ interface ImageCardProps {
   subtitle: string;
   route?: Routes;
   image: string;
+  backgroundColor?: string;
 }
 
-const ImageCard: React.FC<ImageCardProps> = ({ title, subtitle, route, image }) => {
+const ImageCard: React.FC<ImageCardProps> = ({ title, subtitle, route, image, backgroundColor }) => {
   const containerStyles = route ? `${styles.cardContainer} ${styles.clickable}` : styles.cardContainer;
 
   return (
-    <div className={containerStyles} onClick={() => window.location.pathname = route }>
+    <div 
+      className={containerStyles}
+      style={{ backgroundColor: backgroundColor ?? 'lightblue' }}
+      onClick={() => window.location.pathname = route }
+    >
       <div className={styles.cardImageContainer}>
         <img src={image} className={styles.cardImage} />
       </div>
