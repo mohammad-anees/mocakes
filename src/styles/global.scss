@@ -1,33 +1,28 @@
-// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,700;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;600;700&display=swap');
-
-$primary-text: #343434;
-$secondary-text: #cccccc;
-
-$white: #cccccc;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import './colors.scss';
 
 body, html {
   margin: 0px;
   color: $primary-text;
-  background-color: lightblue;
+  background-color: $secondary;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Josefin Slab', sans-serif;
+  font-family: 'Playfair Display', sans-serif;
+  font-style: italic;
 }
 
 
 h5, h6, span, p, li {
-  font-family: 'Josefin Slab', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a { 
   color: $primary-text;
   text-decoration: none;
-  font-family: 'Josefin Slab', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 
   &.active {
     font-weight: 700;

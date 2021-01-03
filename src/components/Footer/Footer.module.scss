@@ -1,14 +1,22 @@
+@import '../../styles/colors.scss';
+
 .footer-container {
   display: flex;
-  background-color: lightblue;
-  padding: 10px 80px;
+  background-color: $secondary;
+  padding: 10px 80px 30px 80px;
 
   .footer-column {
     margin: 0px 10px;
     width: 100%;
 
+    h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
     p {
-      font-size: 18px;
+      font-size: 16px;
+      margin-top: 10px;
     }
   }
 
@@ -17,7 +25,8 @@
     flex-direction: column;
 
     a {
-      font-size: 18px;
+      font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+      font-size: 16px;
       line-height: 30px;
     }
   }
@@ -25,7 +34,7 @@
   .contact-list {
     margin-top: 10px;
     padding-left: 25px;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
   }
 

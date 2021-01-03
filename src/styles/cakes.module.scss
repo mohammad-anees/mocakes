@@ -1,3 +1,5 @@
+@import './colors.scss';
+
 .cakes-container {
   display: block;
 
@@ -6,13 +8,19 @@
     justify-content: center;
 
     a {
-      width: 150px;
+      width: 160px;
       height: 40px;
       line-height: 40px;
-      font-size: 20px;
+      font-size: 16px;
       text-align: center;
-      background-color: lightblue;
+      background-color: $button-color;
       margin: 0px 10px 30px 10px;
+      transition: background-color 0.25s ease;
+
+      &:hover {
+        text-decoration: none;
+        background-color: $button-hover-color;
+      }
     }
 
     @media screen and (max-width: 800px) {
@@ -42,19 +50,6 @@
     text-align: left;
 
     margin: 0 auto;
-
-    .cake-options-row {
-      flex: 1;
-
-      h2 {
-        text-decoration: underline;
-      }
-
-      p {
-        font-size: 18px;
-        padding: 0px 15px;
-      }
-    }
   }
 
   @media screen and (max-width: 800px) {

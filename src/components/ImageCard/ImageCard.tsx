@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import { Routes } from '../../utils/Routes';
 import styles from './ImageCard.module.scss';
@@ -13,12 +13,15 @@ interface ImageCardProps {
 
 const ImageCard: React.FC<ImageCardProps> = ({ title, subtitle, route, image, backgroundColor }) => {
   const containerStyles = route ? `${styles.cardContainer} ${styles.clickable}` : styles.cardContainer;
+  const handleClick = useCallback(() => {
+    if (route) window.location.pathname = route;
+  }, [route])
 
   return (
-    <div 
+    <div
       className={containerStyles}
-      style={{ backgroundColor: backgroundColor ?? 'lightblue' }}
-      onClick={() => window.location.pathname = route }
+      style={{ backgroundColor: backgroundColor ?? '' }}
+      onClick={handleClick}
     >
       <div className={styles.cardImageContainer}>
         <img src={image} className={styles.cardImage} />
