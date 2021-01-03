@@ -1,11 +1,57 @@
 import React from 'react';
 
 import { Routes } from '../utils/Routes';
-import { Page, ImageCard, EmptySpace } from '../components';
+import { Page, ImageCard, EmptySpace, ListSection } from '../components';
 
 import styles from '../styles/cakes.module.scss';
 
 import CakeImagePlaceholder from '../../static/cakes-page/cakes.png';
+
+const SIZES = [
+  { 
+    label: 'Small (12-14 servings)',
+    description: '6 inches in diameter and 6 inches tall (not including flowers or other cake toppers)',
+  },
+  {
+    label: 'Large (20-25 servings)',
+    description: '8 inches in diameter and 6 inches tall (not including flowers or other cake toppers)',
+  },
+];
+
+const FLAVORS = [
+  {
+    label: 'Original:',
+    description: 'Vanilla with vanilla buttercream',
+  },
+  {
+    label: 'Double Chocolate:',
+    description: 'Chocolate with a silky chocolate mousse filling and vanilla buttercream',
+  },
+  {
+    label: 'Salted Caramel:',
+    description: 'Chocolate cake with a salted caramel filling and caramel buttercream',
+  },
+  {
+    label: 'Biscoff:',
+    description: 'Vanilla cake with Biscoff butter buttercream and Biscoff crumble',
+  },
+  {
+    label: 'Tiramisu:',
+    description: 'Espresso soaked vanilla cake with mascarpone buttercream and coffee/chocolate filling',
+  },
+  {
+    label: 'Lemon:',
+    description: 'Lemon cake with a lemon cream cheese buttercream',
+  },
+  {
+    label: 'Red Velvet:',
+    description: 'Red velvet cake with a cream cheese frosting',
+  },
+  {
+    label: 'Birthday:',
+    description: 'Vanilla cake with sprinkles and white chocolate chips and a sprinkle filled vanilla buttercream',
+  },
+];
 
 const Cakes: React.FC = () => {
   return (
@@ -59,28 +105,16 @@ const Cakes: React.FC = () => {
           <EmptySpace />
         </div>
         <div className={styles.cakeOptionsContainer}>
-          <div className={styles.cakeOptionsRow} id='flavors'>
-            <h2>Flavor Guide</h2>
-            <p><b>Original:</b><br/>Vanilla with vanilla buttercream</p>
-            <p><b>Double Chocolate:</b><br/>Chocolate with a silky chocolate mousse filling and vanilla buttercream</p>
-            <p><b>Salted Caramel:</b><br/>Chocolate cake with a salted caramel filling and caramel buttercream</p>
-            <p><b>Biscoff:</b><br/>Vanilla cake with Biscoff butter buttercream and Biscoff crumble</p>
-            <p><b>Tiramisu:</b><br/>Espresso soaked vanilla cake with mascarpone buttercream and coffee/chocolate fillin</p>
-            <p><b>Lemon:</b><br/>Lemon cake with a lemon cream cheese buttercream</p>
-            <p><b>Red Velvet:</b><br/>Red velvet cake with a cream cheese frosting</p>
-            <p><b>Birthday:</b><br/>Vanilla cake with sprinkles and white chocolate chips and a sprinkle filled vanilla buttercream</p>
-          </div>
-          <div className={styles.cakeOptionsRow} id='sizes'>
-            <h2>Size Guide</h2>
-            <p>
-              <b>Small (12-14 servings)</b><br/>
-              6 inches in diameter and 6 inches tall (not including flowers or other cake toppers)
-            </p>
-            <p>
-              <b>Large (20-25 servings)</b><br/>
-              8 inches in diameter and 6 inches tall (not including flowers or other cake toppers) <br/>
-            </p>
-          </div>
+          <ListSection
+            title='Flavor Guide'
+            listItems={FLAVORS}
+            id='flavors'
+          />
+          <ListSection
+            title='Size Guide'
+            listItems={SIZES}
+            id='sizes'
+          />
         </div>
       </div>
     </Page>
