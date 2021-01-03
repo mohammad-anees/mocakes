@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FLAVORS, SIZES } from '../utils/Guides';
+import { CAKE_FLAVORS, CAKE_SIZES } from '../utils/Guides';
 import { Page, ImageCard, EmptySpace, ListSection } from '../components';
 
 import styles from '../styles/cakes.module.scss';
@@ -56,12 +56,12 @@ const Cakes: React.FC = () => {
         <div className={styles.cakeOptionsContainer}>
           <ListSection
             title='Flavor Guide'
-            listItems={FLAVORS}
+            listItems={CAKE_FLAVORS}
             id='flavors'
           />
           <ListSection
             title='Size Guide'
-            listItems={SIZES}
+            listItems={CAKE_SIZES}
             id='sizes'
           />
         </div>

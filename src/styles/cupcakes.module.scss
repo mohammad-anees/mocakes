@@ -1,0 +1,54 @@
+@import './colors.scss';
+
+.cupcakes-container{
+  display: flex;
+
+  .cupcakes-card-row {
+    display: flex;
+
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.page-controls-container {
+  display: flex;
+  justify-content: center;
+
+  a {
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    background-color: $button-color;
+    margin: 0px 10px 30px 10px;
+    transition: background-color 0.25s ease;
+
+    &:hover {
+      text-decoration: none;
+      background-color: $button-hover-color;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    a {
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 16px;
+      margin: 0px 7px 15px 7px;
+      text-align: center;
+    }
+  }
+}
+
+.cupcake-options-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  text-align: left;
+
+  margin: 0 auto;
+}
