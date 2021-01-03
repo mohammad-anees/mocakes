@@ -58,4 +58,47 @@
       }
     } 
   }
+
+  .mobile-nav-container {
+    display: none;
+    padding-right: 30px;
+    font-size: 14px;
+    
+    a {
+      font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+    }
+
+    .nav-icon {
+      flex: 1;
+      text-align: right;
+    }
+
+    .nav-options {
+      display: none;
+    }
+
+    .nav-icon:hover + .nav-options, .nav-options:hover {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      left: 0px;
+      height: 255px;
+      width: 100vw;
+
+      .nav-button {
+        border: none;
+        background-color: $button-color;
+        border-bottom: solid 1px $button-hover-color;
+        font-size: 16px;
+        padding: 0px 5px 0px 5px;
+        text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      display: flex;
+      flex: 1;
+    }
+  }
 }
