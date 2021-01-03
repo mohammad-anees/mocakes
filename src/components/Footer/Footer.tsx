@@ -4,7 +4,7 @@ import { Routes } from '../../utils/Routes';
 import styles from './Footer.module.scss';
 
 const className = (route: Routes): string => {
-  const isActive = window.location.pathname === route;
+  const isActive = typeof window !== 'undefined' ? window.location.pathname === route : false;
 
   return isActive ? 'active' : '';
 }

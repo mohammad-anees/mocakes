@@ -8,7 +8,7 @@ interface HeaderProps {
 }
 
 const NavButton: React.FC<{ route: Routes, label: string }> = ({ route, label }) => {
-  const isActive = window.location.pathname === route;
+  const isActive = typeof window !== 'undefined' ? window.location.pathname === route : false;
   const className = isActive ? `${styles.navButton} active` : styles.navButton;
 
   return (<a className={className} href={route}>{label}</a>)
