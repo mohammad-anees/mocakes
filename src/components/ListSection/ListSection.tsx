@@ -8,7 +8,7 @@ interface ListItem {
 }
 
 interface ListSectionProps {
-  title: string;
+  title?: string;
   listItems: ListItem[];
   id?: string;
 }
@@ -16,7 +16,7 @@ interface ListSectionProps {
 const ListSection: React.FC<ListSectionProps> = ({ title, listItems, id }) => {
   return (
     <div className={styles.listSection} id={id ?? 'list-section'}>
-      <h2>{title}</h2>
+      {title && <h2>{title}</h2>}
       {listItems.map(({ label, description }) => (
         <p key={`${label}-${description}`}>
           <b>{label}</b><br/>
