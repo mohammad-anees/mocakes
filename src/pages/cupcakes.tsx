@@ -16,7 +16,7 @@ const CupCakes: React.FC = () => {
       rest.'
     >
       <div className={styles.pageControlsContainer}>
-        <a href='#flavors'>Flavors</a>
+        <a className='button' href='#flavors'>Flavors</a>
       </div>
       <div className={styles.cupcakesContainer}>
         <div className={styles.cupcakesCardRow}>

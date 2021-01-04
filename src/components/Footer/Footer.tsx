@@ -3,6 +3,9 @@ import { Routes } from '../../utils/Routes';
 
 import styles from './Footer.module.scss';
 
+import InstagramLogo from './InstagramLogo';
+import EmailIcon from './EmailIcon';
+
 const className = (route: Routes): string => {
   const isActive = typeof window !== 'undefined' ? window.location.pathname === route : false;
 
@@ -29,10 +32,20 @@ const Footer: React.FC = () => {
       <div className={styles.footerColumn}>
         <h3>Contact Us</h3>
         <p style={{ marginBottom: 0 }}>Have questions or want to place an order? You can reach out to us through...</p>
-        <ul className={styles.contactList}>
-          <li>Instagram: <a href='https://www.instagram.com/mo.cakes.bakery/'>@mo.cakes.bakery</a></li>
-          <li>Email: <a href="mailto:mocakesbakery.com?subject=Inquiry">mocakes@bakery.com</a></li>
-        </ul>
+        <div className={styles.contactList}>
+          <div className={styles.contact}>
+            <a className='button' href='https://www.instagram.com/mo.cakes.bakery/'>
+              <EmailIcon fill='white' />
+              @mo.cakes.bakery
+            </a>
+          </div>
+          <div>
+            <a  className='button' href="mailto:orders@mocakesbakery.com?subject=Inquiry">
+              <InstagramLogo />
+              orders@mocakesbakery.com
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

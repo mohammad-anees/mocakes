@@ -19,7 +19,7 @@ const Page: React.FC<PageProps> = ({ children, title, subtitle }) => {
   }, [subtitle]);
 
   return (
-    <div>
+    <div className={styles.pageContainer}>
       <Header />
       {displayHeader && (
         <div className={styles.pageTitle}>
