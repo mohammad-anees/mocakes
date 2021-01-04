@@ -6,7 +6,7 @@
 body, html {
   margin: 0px;
   color: $primary-text;
-  background-color: $secondary;
+  // background-color: $secondary;
 }
 
 h1, h2, h3, h4 {
@@ -37,5 +37,36 @@ a {
   &:focus {
     border: none;
     outline: none;
+  }
+
+  &.button {
+    width: 160px;
+    height: 40px;
+
+    color: $button-text-color;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+
+    text-align: center;
+    background-color: $button-color;
+    margin: 0px 10px 30px 10px;
+    transition: background-color 0.25s ease;
+    border-radius: 30px;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+      background-color: $button-hover-color;
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 12px;
+      margin: 0px 7px 15px 7px;
+      text-align: center;
+    }
   }
 }

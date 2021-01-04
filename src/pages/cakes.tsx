@@ -15,8 +15,8 @@ const Cakes: React.FC = () => {
     >
       <div className={styles.cakesContainer}>
         <div className={styles.pageControlsContainer}>
-          <a href='#flavors'>Flavors</a>
-          <a href='#sizes'>Sizes</a>
+          <a className='button' href='#flavors'>Flavors</a>
+          <a className='button' href='#sizes'>Sizes</a>
         </div>
         <div className={styles.cakesCardRow}>
           <ImageCard
