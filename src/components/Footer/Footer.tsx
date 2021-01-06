@@ -35,13 +35,13 @@ const Footer: React.FC = () => {
         <div className={styles.contactList}>
           <div className={styles.contact}>
             <a className='button' href='https://www.instagram.com/mo.cakes.bakery/'>
-              <EmailIcon fill='white' />
+              <InstagramLogo />
               @mo.cakes.bakery
             </a>
           </div>
           <div>
             <a  className='button' href="mailto:orders@mocakesbakery.com?subject=Inquiry">
-              <InstagramLogo />
+              <EmailIcon fill='white' />
               orders@mocakesbakery.com
             </a>
           </div>
