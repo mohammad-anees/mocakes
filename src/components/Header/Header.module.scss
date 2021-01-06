@@ -2,104 +2,106 @@
 
 .header-container {
   width: 100%;
-  height: 70px;
   line-height: 70px;
   background-color: $white;
   border-bottom: $border-color solid 2px;
 
-  display: flex;
-  flex: 0 1;
-
-  @media only screen and (max-width: 800px) {
-    height: 50px;
-    line-height: 50px;
-  }
-
-  .logo-button {
-    height: 100%;
-    font-size: 36px;
-    font-weight: 700;
-    padding-left: 80px;
-    border: none;
-    font-family: 'Playfair Display';
-    font-style: italic;
-
-    &:hover{
-      text-decoration: none;
-    }
-
-    @media only screen and (max-width: 800px) {
-      font-size: 18px;
-      padding-left: 30px;
-    }  
-  }
-
-  .nav-container {
-    height: 100%;
-    flex: 1;
+  .header {
     display: flex;
-    justify-content: flex-end;
-    padding-right: 80px;
-    padding-left: 20px;
-
-    .nav-button {
-      font-family: 'Playfair Display', 'Times New Roman', Times, serif;
-      border: none;
-      background-color: transparent;
-      font-size: 16px;
-      padding: 0px 5px 0px 5px;
-    }
-
+    flex: 0 1;
+  
     @media only screen and (max-width: 800px) {
-      display: none;
-      padding-right: 30px;
-
-      .nav-button {
-        font-size: 14px;
+      height: 50px;
+      line-height: 50px;
+    }
+  
+    .logo-button {
+      height: 100%;
+      font-size: 36px;
+      font-weight: 700;
+      padding-left: 80px;
+      border: none;
+      font-family: 'Playfair Display';
+      font-style: italic;
+  
+      &:hover{
+        text-decoration: none;
       }
-    } 
-  }
-
-  .mobile-nav-container {
-    display: none;
-    padding-right: 30px;
-    font-size: 14px;
-    
-    a {
-      font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+  
+      @media only screen and (max-width: 800px) {
+        font-size: 18px;
+        padding-left: 30px;
+      }  
     }
-
-    .nav-icon {
+  
+    .nav-container {
+      height: 100%;
       flex: 1;
-      text-align: right;
-    }
-
-    .nav-options {
-      display: none;
-    }
-
-    .nav-icon:hover + .nav-options, .nav-options:hover {
       display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 50px;
-      left: 0px;
-      height: 255px;
-      width: 100vw;
-
+      justify-content: flex-end;
+      padding-right: 80px;
+      padding-left: 20px;
+  
       .nav-button {
+        font-family: 'Playfair Display', 'Times New Roman', Times, serif;
         border: none;
-        background-color: $button-color;
-        border-bottom: solid 1px $button-hover-color;
+        background-color: transparent;
         font-size: 16px;
         padding: 0px 5px 0px 5px;
-        text-align: center;
+      }
+  
+      @media only screen and (max-width: 800px) {
+        display: none;
+        padding-right: 30px;
+  
+        .nav-button {
+          font-size: 14px;
+        }
+      } 
+    }
+  
+    .mobile-nav-container {
+      display: none;
+      padding-right: 30px;
+      font-size: 14px;
+      
+      a {
+        font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+      }
+  
+      .nav-icon {
+        flex: 1;
+        text-align: right;
+      }
+  
+      .nav-options {
+        display: none;
+      }
+  
+      .nav-icon:hover + .nav-options, .nav-options:hover {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        height: 255px;
+        width: 100vw;
+  
+        .nav-button {
+          border: none;
+          background-color: $button-color;
+          border-bottom: solid 1px $button-hover-color;
+          font-size: 16px;
+          padding: 0px 5px 0px 5px;
+          text-align: center;
+        }
+      }
+  
+      @media screen and (max-width: 800px) {
+        display: flex;
+        flex: 1;
       }
     }
-
-    @media screen and (max-width: 800px) {
-      display: flex;
-      flex: 1;
-    }
   }
+
 }

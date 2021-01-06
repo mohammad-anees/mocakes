@@ -28,11 +28,13 @@ const Header: React.FC<HeaderProps> = () => {
 
   return (
     <div className={styles.headerContainer}>
-      <a className={styles.logoButton} href={Routes.HOME}>Mo' Cakes</a>
-      <div className={styles.navContainer}>{navButtons()}</div>
-      <div className={styles.mobileNavContainer}>
-        <div className={styles.navIcon}><a>Menu</a></div>
-        <div className={styles.navOptions}>{navButtons()}</div>
+      <div className={styles.header}>
+        <a className={styles.logoButton} href={Routes.HOME}>Mo' Cakes</a>
+        <div className={styles.navContainer}>{navButtons()}</div>
+        <div className={styles.mobileNavContainer}>
+          <div className={styles.navIcon}><a>Menu</a></div>
+          <div className={styles.navOptions}>{navButtons()}</div>
+        </div>
       </div>
     </div>
   )
