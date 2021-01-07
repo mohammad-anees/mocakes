@@ -1,0 +1,22 @@
+$gallery-item-margin: 7px;
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .gallery-item {
+    flex: 0 0 calc(33% - #{($gallery-item-margin * 2)});;
+    margin: auto $gallery-item-margin;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .gallery-item {
+      flex: 1 0 100%;
+    }
+  }
+}

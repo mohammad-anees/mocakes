@@ -3,7 +3,7 @@ export enum Routes {
   CAKES='/cakes',
   CUPCAKES='/cupcakes',
   COOKIES='/cookies',
-  CUSTOMS='/customs',
+  GALLERY='/gallery',
   FAQ='/faq',
 }
 

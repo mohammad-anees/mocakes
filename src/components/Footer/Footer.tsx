@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           <a href={Routes.CAKES} className={className(Routes.CAKES)}>Cakes</a>
           <a href={Routes.CUPCAKES} className={className(Routes.CUPCAKES)}>Cupcakes</a>
           <a href={Routes.COOKIES} className={className(Routes.COOKIES)}>Cookies</a>
-          <a href={Routes.CUSTOMS} className={className(Routes.CUSTOMS)}>Customs</a>
+          <a href={Routes.GALLERY} className={className(Routes.GALLERY)}>Gallery</a>
           <a href={Routes.FAQ} className={className(Routes.FAQ)}>FAQ</a>
         </div>
       </div>
