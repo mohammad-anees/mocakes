@@ -51,7 +51,12 @@ const Cakes: React.FC = () => {
             image={CakeImagePlaceholder}
             backgroundColor='white'
           />
-          <EmptySpace />
+          <ImageCard
+            title='Custom Design'
+            subtitle='Starting at $80'
+            image={CakeImagePlaceholder}
+            backgroundColor='white'
+          />
         </div>
         <div className={styles.cakeOptionsContainer}>
           <ListSection
