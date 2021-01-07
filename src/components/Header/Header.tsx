@@ -19,7 +19,7 @@ const navButtons = () => (
     <NavButton route={Routes.CAKES} label='Cakes' />
     <NavButton route={Routes.CUPCAKES} label='Cupcakes' />
     <NavButton route={Routes.COOKIES} label='Cookies' />
-    <NavButton route={Routes.CUSTOMS} label='Customs' />
+    <NavButton route={Routes.GALLERY} label='Gallery' />
     <NavButton route={Routes.FAQ} label='FAQ' />
   </>
 )
